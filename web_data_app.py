@@ -82,7 +82,7 @@ def book_data():
     print(book_data)        # Print to the terminal as confirmation - only we can see this
 
     # Format and print the DataFrame using the html template provided in the templates subdirectory
-    return render_template('template_v2.html',  tables=[book_data.to_html(classes='data')], titles=book_data.columns.values)
+    return render_template('template.html',  tables=[book_data.to_html(classes='data')], titles=book_data.columns.values)
 
 @app.route("/learn")
 def learn():
